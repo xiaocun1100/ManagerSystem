@@ -87,7 +87,7 @@ import type { FormInstance, FormRules } from 'element-plus'
 import type { ElTree } from 'element-plus'
 import { Plus, Edit, Delete, Key } from '@element-plus/icons-vue'
 import { getRoleListAPI, addRoleAPI, updateRoleAPI, deleteRoleAPI, getMenuListAPI } from '../../api'
-import type { Role, Menu } from '../types'
+import type { Role, Menu } from '../../types'
 
 const loading = ref(false)
 const tableData = ref<Role[]>([])

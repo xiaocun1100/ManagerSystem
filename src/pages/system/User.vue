@@ -105,7 +105,7 @@ import { ElMessage, ElMessageBox } from 'element-plus'
 import type { FormInstance, FormRules } from 'element-plus'
 import { Plus, Search, Refresh, Edit, Delete } from '@element-plus/icons-vue'
 import { getUserListAPI, addUserAPI, updateUserAPI, deleteUserAPI, getAllRolesAPI } from '../../api'
-import type { User, Role, PageParams } from '../types'
+import type { User, Role, PageParams } from '../../types'
 
 const loading = ref(false)
 const tableData = ref<User[]>([])
@@ -193,7 +193,7 @@ const handleEdit = (row: User) => {
     email: row.email,
     phone: row.phone,
     status: row.status,
-    roleIds: [...row.roleIds],
+    roleIds: row.roleIds ? [...row.roleIds] : [],
   })
   dialogVisible.value = true
 }
